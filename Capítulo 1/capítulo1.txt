@@ -1,0 +1,167 @@
+📘 CAPÍTULO 1 — INTRODUÇÃO À ENGENHARIA DE SOFTWARE
+
+
+1️⃣ 🌍 IMPORTÂNCIA DO SOFTWARE:
+
+O software está presente em praticamente todas as atividades humanas:
+
+🏢 Empresas → automatizam processos internos;
+🏛 Governos → arrecadam impostos e realizam eleições;
+🛒 E-commerce → vendem produtos globalmente;
+🚗 Sistemas embarcados → carros, aviões, satélites;
+📱 Serviços digitais → transporte, hospedagem, telecomunicações.
+
+🔎 Conclusão:
+O software deixou de ser suporte e tornou-se infraestrutura essencial da sociedade moderna.
+
+
+2️⃣ 🏗 ENGENHARIA DE SOFTWARE:
+
+📌 Definição (Conferência da OTAN, 1968):
+
+Aplicação de abordagens sistemáticas, disciplinadas e quantificáveis
+para desenvolver, operar, manter e evoluir software.
+
+Engenharia de Software =
+Método + Disciplina + Medição + Qualidade
+
+
+3️⃣ 🪙❌ NÃO EXISTE "BALA DE PRATA":
+
+Conceito defendido por Frederick Brooks.
+
+Segundo Brooks, existem dois tipos de dificuldades:
+
+🔹 Dificuldades Essenciais (inerentes ao software):
+- Complexidade;
+- Conformidade;
+- Facilidade de mudanças;
+- Invisibilidade.
+
+🔹 Dificuldades Acidentais:
+- Relacionadas a ferramentas, linguagens e tecnologias.
+
+🎯 Conclusão:
+Não existe tecnologia milagrosa capaz de eliminar os desafios fundamentais do desenvolvimento de software.
+
+
+4️⃣ 🔄 PROCESSOS DE DESENVOLVIMENTO DE SOFTWARE:
+
+Um processo define as etapas necessárias para construir e entregar um sistema.
+
+4.1 🌊 WATERFALL (CASCATA)
+
+Fluxo Sequencial:
+
+Requisitos
+↓
+Análise / Projeto
+↓
+Projeto detalhado
+↓
+Codificação
+↓
+Testes
+↓
+Entrega final
+
+📌 Características:
+- Processo linear e sequencial;
+- Planejamento detalhado no início;
+- Validação apenas no final;
+- Mudanças são difíceis e caras.
+
+
+4.2 🚀 PROCESSOS ÁGEIS
+
+Fluxo Iterativo:
+
+Planejamento
+↓
+Pequeno incremento
+↓
+Entrega parcial
+↓
+Validação com usuário
+↓
+Novo ciclo
+
+📌 Características:
+- Iterativo e incremental;
+- Entregas frequentes;
+- Feedback constante;
+- Alta adaptabilidade às mudanças.
+
+🔧 Métodos Ágeis:
+- Scrum;
+- XP;
+- Kanban;
+- Lean Development.
+
+
+5️⃣ 🧩 CLASSIFICAÇÃO DOS SISTEMAS DE SOFTWARE
+(Proposta por Bertrand Meyer)
+
+5.1 🟢 Sistemas C (Casual)
+
+- Baixo risco;
+- Pequenos e simples;
+- Pouca formalidade;
+- Podem tolerar alguns bugs;
+- Desenvolvidos por 1–2 pessoas.
+
+⚠ Risco: Over-engineering.
+
+
+5.2 🔵 Sistemas B (Business)
+
+- Médio risco;
+- Aplicações corporativas;
+- Sistemas Web;
+- ERPs e sistemas financeiros;
+- Beneficiam-se fortemente de Engenharia de Software estruturada.
+
+🎯 Objetivo:
+Produtividade + Qualidade interna e externa.
+
+
+5.3 🔴 Sistemas A (Acute — Missão Crítica)
+
+- Alto risco;
+- Falhas podem causar prejuízo financeiro ou perda de vidas;
+- Exigem processos rigorosos;
+- Revisões e testes exaustivos;
+- Possuem redundância e certificações externas.
+
+
+6️⃣ ⭐ QUALIDADE DE SOFTWARE
+
+🔹 Qualidade Externa (percebida pelo usuário):
+- Correção;
+- Robustez;
+- Eficiência;
+- Portabilidade;
+- Usabilidade;
+- Compatibilidade.
+
+🔹 Qualidade Interna (percebida por desenvolvedores):
+- Modularidade;
+- Legibilidade;
+- Manutenibilidade;
+- Testabilidade.
+
+
+🎓 CONCLUSÃO GERAL
+
+Tipo de sistema
+↓
+Define nível de rigor
+↓
+Define processo de desenvolvimento
+
+Sistemas C → Simples;
+Sistemas B → Estruturados;
+Sistemas A → Rigor extremo.
+
+A Engenharia de Software existe para organizar,
+reduzir riscos e aumentar a qualidade na construção de software.
