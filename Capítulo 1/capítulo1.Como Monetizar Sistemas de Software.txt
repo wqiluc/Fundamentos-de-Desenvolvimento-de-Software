@@ -1,0 +1,73 @@
+Exercícios:
+
+1. Pesquise sistemas de empresas brasileiras que adotam o modelo SaaS. O que esses sistemas fazem? Qual o valor da assinatura cobrada? Eles adotam o modelo freemium?
+
+R- 1.1 Bling:
+
+O que faz:
+Sistema de gestão empresarial (ERP) para pequenas e médias empresas. Permite:
+emissão de notas fiscais;
+controle de estoque;
+gestão de vendas;
+integração com lojas virtuais e marketplaces.
+
+Valor da assinatura:
+cerca de R$ 39 a R$ 149 por mês, dependendo do plano.
+
+Modelo freemium:
+Geralmente não possui plano gratuito permanente;
+costuma oferecer período de teste grátis (trial).
+
+1.2 Conta Azul
+
+O que faz:
+Sistema de gestão financeira e ERP para pequenas empresas. Permite:
+controle financeiro; emissão de boletos e notas fiscais; gestão de fluxo de caixa; e geração de relatórios financeiros.
+
+Valor da assinatura:
+aproximadamente R$ 59 a R$ 249 por mês, dependendo do plano.
+
+Modelo freemium:
+Não possui plano gratuito permanente; normalmente oferece período de teste gratuito.
+
+3. MoollyPay
+O que faz:
+Sistema SaaS para vender produtos digitais, permitindo:
+criação de páginas de checkout;
+integração com gateways de pagamento;
+área de membros para cursos e conteúdos digitais.
+
+Valor da assinatura:
+plano Pro: cerca de R$ 97 por mês.
+
+Modelo freemium:
+Sim, possui plano gratuito (Starter) com funcionalidades limitadas.
+
+
+2. São vantagens de sistemas SaaS, EXCETO:
+ 
+(a) - Clientes não precisam ter o hardware adequado para executar a funcionalidade principal de um sistema SaaS.
+
+(b) - Clientes não precisam realizar backups dos seus dados.
+Clientes são imunes a falhas de segurança, pois sistemas SaaS executam em plataformas de computação em nuvem.
+
+(c✅) - Atualizações e correções de bugs são mais fáceis, pois elas ocorrem apenas nos servidores.
+
+Explicação:
+
+Essa afirmação está incorreta, porque mesmo sistemas SaaS hospedados na nuvem não, são totalmente imunes a falhas de segurança. Podem ocorrer:
+- ataques cibernéticos;
+- vazamento de dados;
+- falhas de configuração;
+- problemas de segurança na aplicação ou no servidor.
+A nuvem geralmente possui boas práticas e infraestrutura mais segura, mas não elimina completamente os riscos.
+
+(d) - Clientes não precisam comprar uma nova licença quando uma versão importante do sistema for lançada.
+
+
+3. Defina: 
+(a) custo de um sistema; 
+R- É o valor gasto para desenvolver, implementar, manter e operar um sistema. Inclui despesas como desenvolvimento, infraestrutura, licenças, manutenção, suporte e treinamento.
+
+(b) valor de um sistema.
+R- É o benefício que o sistema gera para a empresa ou usuários. Pode incluir aumento de produtividade, redução de custos, melhoria nos processos, tomada de decisão mais eficiente e vantagem competitiva.

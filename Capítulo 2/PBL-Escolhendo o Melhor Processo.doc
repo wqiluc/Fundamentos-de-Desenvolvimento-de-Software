@@ -1,0 +1,223 @@
+========================================================
+📚 PBL - Aula 3 - Escolhendo o Melhor Processo
+========================================================
+
+📱 CASO 2: STARTUP DE APLICATIVO DE ENTREGAS
+
+👨🏻‍🏫 Docente:
+Lucas Rodolfo Celestino de Farias.
+
+👥 Integrantes do grupo:
+Lucas Paguetti Pereira;
+Tiago Luiz Moreira de Vasconcelos;
+Helãma Procídio; e
+Felipe Franca.
+
+--------------------------------------------------------
+📖 1. INTRODUÇÃO
+--------------------------------------------------------
+
+Este PBL analisa o cenário de uma startup que deseja desenvolver
+um aplicativo inovador de entregas rápidas.
+
+O objetivo é avaliar os desafios do projeto, comparar diferentes
+processos de desenvolvimento de software e identificar qual modelo
+é mais adequado para esse contexto.
+
+A partir dessa análise, também será apresentado um plano básico de
+implementação utilizando o método escolhido.
+
+--------------------------------------------------------
+⚠️ 2. DESAFIOS DO PROJETO
+--------------------------------------------------------
+
+A startup deseja lançar um aplicativo inovador, porém o modelo de
+negócio ainda não está completamente definido.
+
+Isso gera alguns desafios importantes:
+
+• Mudanças frequentes nos requisitos;
+• Necessidade de lançar rapidamente no mercado; 
+• Ajustes constantes baseados no feedback dos usuários; 
+• Recursos limitados da startup; e 
+• Alta concorrência no mercado de aplicativos de entrega.
+
+--------------------------------------------------------
+🚨 3. PRINCIPAIS RISCOS
+--------------------------------------------------------
+
+Durante o desenvolvimento do projeto, alguns riscos precisam ser
+considerados:
+
+• Desenvolver funcionalidades que depois podem não ser necessárias; 
+• Perder tempo com planejamento excessivo;
+• Não conseguir adaptar o produto às necessidades dos usuários; e  
+• Atrasar o lançamento e perder espaço no mercado.
+
+--------------------------------------------------------
+⚙️ 4. COMPARAÇÃO DOS PROCESSOS DE DESENVOLVIMENTO
+--------------------------------------------------------
+
+🔹 Waterfall (Cascata)
+
+• Processo sequencial e estruturado  
+• Pouca flexibilidade para mudanças  
+• Ideal para projetos com requisitos bem definidos  
+
+---
+
+🔹 Espiral
+
+• Forte foco em análise de riscos  
+• Exige planejamento detalhado  
+• Pode ser complexo e custoso para startups  
+
+---
+
+🔹 Scrum
+
+• Metodologia ágil  
+• Trabalha com ciclos curtos chamados Sprints  
+• Permite entregas rápidas e incrementais  
+• Facilita mudanças durante o desenvolvimento  
+
+---
+
+🔹 Kanban
+
+• Baseado em fluxo contínuo de tarefas  
+• Muito utilizado para manutenção e suporte  
+• Menos focado no planejamento de novos produtos  
+
+---
+
+🔹 XP (Extreme Programming)
+
+• Focado em qualidade de código  
+• Utiliza práticas como programação em par  
+• Testes frequentes durante o desenvolvimento  
+
+--------------------------------------------------------
+🏆 5. PROCESSO ESCOLHIDO: SCRUM
+--------------------------------------------------------
+
+O Scrum foi escolhido como o processo mais adequado para
+esse projeto.
+
+Motivos da escolha:
+
+✅ Permite mudanças frequentes nos requisitos  
+✅ Possibilita lançar um MVP rapidamente  
+✅ Trabalha com entregas incrementais  
+✅ Permite receber feedback dos usuários  
+✅ Muito utilizado por startups de tecnologia  
+
+--------------------------------------------------------
+🛠 6. PLANO DE IMPLEMENTAÇÃO COM SCRUM
+--------------------------------------------------------
+
+📌 6.1 Formação do Time
+
+O time será organizado da seguinte forma:
+
+• Product Owner  
+Responsável por definir prioridades e visão do produto.
+
+• Scrum Master  
+Responsável por garantir que a metodologia Scrum seja seguida.
+
+• Equipe de Desenvolvimento  
+Formada por programadores, designers e testadores.
+
+---
+
+📌 6.2 Criação do Product Backlog
+
+Lista de funcionalidades que aplicativo terá:
+
+• Cadastro de usuários;  
+• Cadastro de entregadores;  
+• Sistema de pedidos;  
+• Rastreamento da entrega;  
+• Sistema de pagamento;  
+• Avaliação de entregadores.
+e mais funcionalidades vão sendo adicionadas com o passar
+do tempo!  
+
+---
+
+📌 6.3 Planejamento das Sprints
+
+Cada Sprint terá duração entre 2 e 3 semanas.
+
+Sprint 1:
+• Cadastro de usuários  
+• Login  
+• Interface inicial do aplicativo  
+
+Sprint 2:
+• Sistema de pedidos  
+• Cadastro de restaurantes ou lojas  
+
+Sprint 3:
+• Rastreamento da entrega  
+• Sistema de notificações  
+
+Sprint 4:
+• Sistema de pagamento  
+• Avaliação de entregadores  
+
+---
+
+📌 6.4 Reuniões do Scrum
+
+🔹 Daily Scrum  
+Reunião diária de aproximadamente 15 minutos para responder:
+
+• O que fiz ontem  
+• O que farei hoje  
+• Se existe algum impedimento  
+
+🔹 Sprint Review  
+Apresentação das funcionalidades concluídas ao final da Sprint.
+
+🔹 Sprint Retrospective  
+Discussão sobre melhorias no processo de desenvolvimento.
+
+---
+
+📌 6.5 Lançamento do MVP
+
+Após algumas Sprints será lançado um
+MVP (Produto Mínimo Viável).
+
+Esse lançamento permitirá validar o produto no mercado
+e coletar feedback inicial dos usuários.
+
+---
+
+📌 6.6 Melhoria Contínua
+
+Com base no feedback dos usuários, será possível:
+
+• Adicionar novas funcionalidades; 
+• Melhorar a experiência do usuário;
+• Corrigir erros identificados; e 
+• Adaptar o modelo de negócio  
+
+--------------------------------------------------------
+✅ 7. CONCLUSÃO
+--------------------------------------------------------
+
+O Scrum se mostrou o processo mais adequado para o
+desenvolvimento do aplicativo de entregas da startup.
+
+Isso ocorre porque o método oferece:
+
+• Flexibilidade para mudanças;  
+• Entregas rápidas de funcionalidades; e
+• Adaptação contínua baseada em feedback.
+
+Essas características são essenciais para startups
+que precisam validar ideias rapidamente e evoluir
+seu produto no mercado.
