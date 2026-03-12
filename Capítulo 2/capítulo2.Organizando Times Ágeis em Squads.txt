@@ -62,7 +62,6 @@ Exercícios:
  Verdadeiro✅
  Falso
 
-
 2. Descreva um problema de estruturas baseadas em silos funcionais, isto é, times separados de desenvolvedores, administradores de bancos de dados, testadores, operação, designers, etc.
 
 R- Um problema é a alta dependência entre equipes. Como cada área é separada (desenvolvimento, banco de dados, testes, operação, etc.), um time precisa esperar o outro para continuar o trabalho. Isso torna o desenvolvimento mais lento, dificulta a comunicação e reduz a autonomia das equipes.
