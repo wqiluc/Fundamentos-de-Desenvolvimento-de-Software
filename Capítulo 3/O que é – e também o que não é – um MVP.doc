@@ -1,0 +1,126 @@
+====================================================================
+        CAPÍTULO 3 — ENGENHARIA DE SOFTWARE MODERNA ->
+        O QUE É – E TAMBÉM O QUE NÃO É – UM MVP?
+====================================================================
+
+(1) Qual a Diferença entre MVP e pesquisa de mercado:
+--------------------------------------------------------------------
+Um MVP (Minimum Viable Product) é uma versão simplificada e funcional de
+um produto/ideia que possui apenas funcionalidades essenciais. Ele é
+utilizado por usuários reais para testar módelos de negócios e
+observar como as pessoas realmente utilizam o sistema.
+
+Já a pesquisa de mercado consiste na coleta de informações sobre
+clientes e mercado por meio de entrevistas, questionários ou análise
+de dados.
+
+Diferença principal:
+- Pesquisa de mercado → coleta opiniões e expectativas;
+- MVP → observa o comportamento real dos usuários utilizando um
+  produto funcional.
+
+====================================================================
+
+(2) Por que um MVP é considerado um processo?
+--------------------------------------------------------------------
+Segundo a visão defendida por incubadoras de startups como a
+YCombinator, um MVP NÃO deve ser visto apenas como a primeira versão
+de um produto, mas sim como parte de um ciclo de aprendizado.
+
+Esse processo normalmente segue o ciclo:
+
+        CONSTRUIR  →  MEDIR  →  APRENDER
+
+A cada versão do MVP:
+
+- cria-se uma solução simples;
+- coleta-se feedback dos usuários; e
+- melhora-se o produto na próxima versão.
+
+Por isso, um MVP não é um produto final, mas sim um método contínuo
+de experimentação e evolução da solução.
+
+====================================================================
+
+(3) A mudança da Netflix de DVDs para Streaming foi um pivô?
+--------------------------------------------------------------------
+Sim, essa mudança pode ser considerada um pivô.
+
+Pivô é uma mudança estratégica no modelo de negócio, 
+produto ou tecnologia de uma empresa, 
+realizada com base em aprendizados do mercado, 
+mantendo o objetivo principal do negócio.
+
+Entre 97 e 2007, a Netflix enviava DVDs físicos pelo correio para
+seus assinantes. Com a evolução da internet e da banda larga, a
+empresa passou a oferecer conteúdo por streaming.
+
+Essa mudança é considerada um pivô porque:
+- mudou a tecnologia utilizada;
+- mudou a forma de entrega do serviço; e
+- manteve o objetivo principal da empresa: oferecer entretenimento
+  sob demanda.
+
+Ou seja, a proposta de valor permaneceu, mas o modelo de execução 
+da empresa foi transformado.
+
+====================================================================
+
+(4) Criar um MVP para uma empresa de delivery seria recomendado?
+--------------------------------------------------------------------
+Sim, criar um MVP seria recomendado, mesmo em um mercado competitivo.
+
+Porém, antes de investir em uma plataforma completa, o MVP precisa testar:
+- se existe demanda real na cidade;
+- como funciona a logística de entrega;
+- se os clientes aceitam o serviço; e
+- como será o relacionamento com restaurantes parceiros.
+
+O MVP poderia começar com:
+- um site simples para pedidos;
+- poucos restaurantes parceiros;
+- controle manual de entregas.
+
+Depois de validar o modelo, a empresa poderia investir em um sistema
+mais completo e escalável para os negócios.
+
+====================================================================
+
+(5) Descreva um domínio no qual é mais desafiador criar um MVP. 
+Justifique sua resposta.
+--------------------------------------------------------------------
+Um domínio onde é mais difícil criar um MVP é o setor de saúde ou
+de equipamentos médicos.
+
+Isso ocorre porque:
+- existem muitas regulamentações;
+- são necessários testes e certificações;
+- falhas podem colocar vidas em risco.
+
+Por esses motivos, não é possível lançar versões experimentais
+rapidamente para testes com usuários, o que torna o processo de
+validação mais lento e complexo.
+
+====================================================================
+
+(6) Diferença entre MVP e protótipo de sistema:
+--------------------------------------------------------------------
+Um protótipo é uma representação inicial de um sistema usada para
+demonstrar ideias, conceitos ou interfaces. Muitas vezes ele não
+possui todas as funcionalidades e pode não funcionar completamente.
+
+Já o MVP é uma versão funcional do produto que pode ser utilizada
+por usuários reais para validar hipóteses de negócio.
+
+Resumo:
+
+    PROTÓTIPO
+        ↓
+    Demonstra a ideia
+
+
+       MVP
+        ↓
+    Testa a solução no mercado real
+
+====================================================================
