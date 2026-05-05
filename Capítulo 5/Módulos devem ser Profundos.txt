@@ -1,0 +1,316 @@
+============================================================
+  EXERCÍCIOS - MÓDULOS PROFUNDOS E DESIGN DE SOFTWARE
+============================================================
+
+------------------------------------------------------------
+QUESTÃO 1
+------------------------------------------------------------
+
+PERGUNTA:
+  Dê dois exemplos de módulos profundos. Para facilitar sua resposta,
+  pense em pacotes ou bibliotecas de sua linguagem preferida.
+
+RESPOSTA:
+  Um módulo profundo é aquele que possui uma interface simplificada em relação
+  à complexidade da sua implementação — ou seja, ele esconde muito por
+  trás de uma fachada pequena e fácil de usar.
+
+  Exemplo 1: java.util.HashMap (Java)
+
+    Interface (o que o usuário vê):
+
+      map.put(chave, valor);
+      map.get(chave);
+      map.containsKey(chave);
+
+    Implementação (o que está escondido):
+      - Cálculo de hash da chave;
+      - Resolução de colisões por encadeamento ou open addressing;
+      - Redimensionamento dinâmico da tabela (rehashing); e
+      - Tratamento de casos especiais (chave null, capacidade inicial,
+        fator de carga)
+
+    Com apenas três métodos simples, o HashMap esconde centenas de linhas
+    de lógica interna complexa. O usuário não precisa saber nada sobre
+    hashing.
+
+  Exemplo 2: open() / read() / write() — chamadas de sistema Unix
+             (disponíveis em C e Python)
+
+    Interface:
+      fd = open("arquivo.txt", "r")
+      conteudo = fd.read()
+      fd.close()
+
+    Implementação (o que está escondido):
+      - Gerenciamento de descritores de arquivo no kernel;
+      - Buffering de I/O;
+      - Interação com o sistema de arquivos (inodes, blocos de disco);
+      - Controle de concorrência e locks; e
+      - Tratamento de erros de hardware.
+
+    O programador usa três chamadas triviais sem precisar conhecer nada
+    sobre o funcionamento interno do sistema operacional.
+
+
+------------------------------------------------------------
+QUESTÃO 2
+------------------------------------------------------------
+
+PERGUNTA:
+  Seja a seguinte afirmação: módulos profundos implicam obrigatoriamente
+  em funções ou classes grandes, com muitas linhas de código. Ela é
+  verdadeira ou falsa? Justifique e discuta.
+
+AFIRMAÇÃO AVALIADA:
+  "Módulos profundos implicam obrigatoriamente em funções ou classes
+  grandes, com muitas linhas de código."
+
+RESPOSTA: FALSA.
+
+  A profundidade de um módulo é definida pela relação entre a complexidade
+  da sua implementação e a simplicidade da sua interface — não pelo número
+  de linhas de código por si só.
+
+  Um módulo pode ser profundo e ao mesmo tempo ter métodos individualmente
+  pequenos, desde que cada um desses métodos esconda complexidade real.
+  A classe HashMap, por exemplo, é composta por vários métodos, muitos
+  deles razoavelmente curtos, mas o conjunto deles esconde uma complexidade
+  interna enorme.
+
+  Além disso, a profundidade é uma propriedade relativa à interface exposta.
+  Uma classe com 5.000 linhas de implementação mas com 200 métodos públicos
+  pode ser considerada RASA, porque sua interface é tão grande quanto sua
+  implementação. Já uma classe com 100 linhas de implementação mas com
+  apenas um método público pode ser considerada PROFUNDA, pois esconde
+  bem a lógica.
+
+  Portanto, profundidade != tamanho. O que define profundidade é a razão
+  entre o que está escondido e o que está exposto ao usuário do módulo.
+
+
+------------------------------------------------------------
+QUESTÃO 3
+------------------------------------------------------------
+
+PERGUNTA:
+  Suponha o seguinte método da classe String de Java:
+
+    public boolean isEmpty()
+    {
+        return value.length == 0;
+    }
+
+  Esse método é raso? Justifique e discuta.
+
+  Sugestão: Para responder à pergunta pense no código que chama isEmpty().
+  Por exemplo, você trocaria o seguinte código cliente:
+
+    if (myString.isEmpty()) 
+    {
+        ...
+    }
+
+  por um código como o seguinte?
+
+    if (myString.length() == 0) 
+    {
+        ...
+    }
+
+CÓDIGO ANALISADO:
+
+  public boolean isEmpty() 
+  {
+      return value.length == 0;
+  }
+
+CÓDIGO DO CLIENTE (comparação proposta pelo enunciado):
+
+  // Versão com isEmpty():
+  if (myString.isEmpty()) 
+  {
+      ...
+  }
+
+  // Versão equivalente sem isEmpty():
+  if (myString.length() == 0) 
+  {
+      ...
+  }
+
+RESPOSTA: Sim, isEmpty() é um método RASO — mas ainda assim útil e
+          bem nomeado.
+
+  A sugestão do enunciado é reveladora. Você trocaria:
+
+    if (myString.isEmpty()) { ... }
+
+  por:
+
+    if (myString.length() == 0) { ... }
+
+  Provavelmente não — mas não porque isEmpty() esconde complexidade real,
+  e sim porque o nome melhora a legibilidade.
+
+  isEmpty() é raso porque sua interface (o nome + o retorno boolean) é
+  praticamente tão simples quanto sua implementação (value.length == 0).
+  Não há lógica escondida: o método faz exatamente o que parece fazer,
+  e qualquer desenvolvedor consegue reescrever o código cliente sem ele.
+
+  No entanto, isso não significa que isEmpty() seja um método ruim.
+  Ele é raso, mas cumpre um papel importante: aumenta a expressividade
+  do código. "isEmpty()" comunica intenção de forma mais clara do que
+  "length() == 0". Essa clareza tem valor.
+
+  A crítica aos módulos rasos, no contexto do livro "A Philosophy of
+  Software Design" de John Ousterhout, é que eles não compensam o custo
+  de existir como abstração separada quando não escondem complexidade.
+  No caso de isEmpty(), o custo é mínimo (é apenas um método de
+  conveniência), então o balanço ainda pode ser positivo — especialmente
+  pela legibilidade.
+
+  Conclusão: isEmpty() é raso, mas não prejudicial. É um exemplo de
+  módulo raso aceitável, cujo valor está na legibilidade, não no
+  ocultamento de complexidade.
+
+
+------------------------------------------------------------
+QUESTÃO 4
+------------------------------------------------------------
+
+PERGUNTA:
+  Seja a seguinte afirmação: todo módulo raso é pequeno, mas nem todo
+  módulo pequeno é raso. Ela é verdadeira ou falsa? Justifique e discuta.
+  (observação: um módulo pequeno é aquele que tem poucas linhas de código.)
+
+AFIRMAÇÃO AVALIADA:
+  "Todo módulo raso é pequeno, mas nem todo módulo pequeno é raso."
+
+RESPOSTA: VERDADEIRA.
+
+  Parte 1 — "Todo módulo raso é pequeno":
+    Um módulo raso é aquele cuja interface é quase tão complexa quanto
+    sua implementação — ou seja, ele não esconde muita coisa. Se a
+    implementação não faz muito, então necessariamente ela é pequena
+    (poucas linhas de código). Logo, módulos rasos tendem a ser pequenos
+    por definição. Seria contraditório ter um módulo raso com muitas
+    linhas de implementação, pois isso significaria que há muita lógica
+    interna que não está sendo escondida — o que tornaria a interface
+    proporcionalmente grande.
+
+    (Nota: há uma nuance — um módulo pode ter implementação grande mas
+    interface igualmente grande, sendo ao mesmo tempo grande E raso. Mas
+    em geral, a afirmação é válida para a grande maioria dos casos.)
+
+  Parte 2 — "Nem todo módulo pequeno é raso":
+    Este é o ponto mais interessante. Um módulo pode ter poucas linhas
+    de código e ainda assim ser profundo, se ele esconder uma complexidade
+    conceitual real por trás de uma interface simples.
+
+    Considere isEmpty() — pequeno E raso.
+    Agora compare com este método hipotético:
+
+      public String normalize(String input) {
+          // 5 linhas que aplicam unicode normalization, trim, lowercase
+          // e remoção de acentos
+      }
+
+    Esse método tem poucas linhas, mas esconde decisões de design não
+    triviais (qual forma de normalização Unicode? como tratar caracteres
+    especiais?). Ele é pequeno e profundo ao mesmo tempo.
+
+    Portanto, tamanho (linhas de código) e profundidade (razão entre
+    implementação e interface) são dimensões ortogonais — independentes
+    entre si.
+
+
+------------------------------------------------------------
+QUESTÃO 5
+------------------------------------------------------------
+
+PERGUNTA:
+  Seja a seguinte afirmação retirada do livro de Refactoring de
+  Martin Fowler:
+
+    "Small methods really work only when you have good names, so you
+    need to pay attention to naming. People sometimes ask me what length
+    I look for in a method. To me length is not the issue. The key is
+    the semantic distance between the method name and the method body."
+
+  Explique o conceito de distância semântica entre o nome de um método
+  e o corpo desse método, mencionado na citação acima.
+
+CITAÇÃO (Martin Fowler — Refactoring):
+  "Small methods really work only when you have good names, so you need
+  to pay attention to naming. People sometimes ask me what length I look
+  for in a method. To me length is not the issue. The key is the semantic
+  distance between the method name and the method body."
+
+RESPOSTA:
+
+  A distância semântica entre o nome de um método e seu corpo é a
+  diferença de abstração entre o que o nome promete e o que o código
+  realmente executa.
+
+  --- Quando a distância semântica é PEQUENA (ideal): ---
+
+    O nome do método descreve exatamente — e no mesmo nível de abstração
+    — o que o corpo faz. O leitor lê o nome e entende o propósito; o
+    corpo apenas confirma e detalha.
+
+    Exemplo com distância semântica PEQUENA:
+
+      public void sendWelcomeEmail(User user) 
+      {
+          emailService.send(
+              user.getEmail(),
+              "Bem-vindo!",
+              buildWelcomeMessage(user)
+          );
+      }
+
+    O nome diz "enviar e-mail de boas-vindas". O corpo faz exatamente
+    isso. A distância é pequena — há coerência entre promessa e execução.
+
+  --- Quando a distância semântica é GRANDE (problemático): ---
+
+    O nome sugere uma coisa, mas o corpo faz algo diferente, muito mais
+    detalhado, ou em um nível de abstração completamente diferente.
+
+    Exemplo 1 — nome vago demais:
+
+      public void processUser(User user) 
+      {
+          // Conecta ao banco, valida campos, envia e-mail,
+          // atualiza log, chama serviço externo de auditoria...
+      }
+
+    O nome "processUser" é genérico e não representa o que o corpo
+    realmente executa. O leitor não consegue antecipar o comportamento
+    apenas pelo nome.
+
+    Exemplo 2 — nome específico demais para o que o método realmente faz:
+
+      public boolean checkIfEmailContainsAtSymbol(String email) 
+      {
+          // Na prática, faz validação completa de formato, domínio,
+          // verificação de MX record, blacklist, etc.
+      }
+
+    Aqui o nome promete pouco, mas o corpo faz muito — a distância
+    semântica é grande no sentido oposto.
+
+  A conexão com módulos profundos
+
+    Fowler está dizendo essencialmente a mesma coisa que Ousterhout, com
+    outra perspectiva: um método curto só tem valor se o nome for capaz
+    de resumir adequadamente o que ele faz. Se o nome não consegue
+    capturar a essência do corpo, ou se o corpo é trivial demais para
+    merecer um nome próprio, a extração do método gerou complexidade
+    desnecessária.
+
+    Em outras palavras: um bom método curto tem pequena distância
+    semântica — o nome é uma abstração precisa do corpo. Um método raso
+    e mal nomeado tem grande distância semântica e confunde mais do que
+    ajuda.
