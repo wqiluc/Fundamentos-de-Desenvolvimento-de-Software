@@ -1,0 +1,113 @@
+PBL_casa - Fundamentos de Desenvolvimento de Software
+Capítulo 5 - Princípios de Projeto de Software
+================================================================
+
+QUESTÃO 1 - Julgue os itens a seguir em Verdadeiro ou Falso:
+
+(F) Uma maneira de atingir integridade conceitual é por meio de um projeto dirigido por comitês.
+RESPOSTA: Falso. Integridade conceitual é melhor alcançada com um único arquiteto ou poucos
+responsáveis, não por comitês, que tendem a gerar inconsistência por negociação de ideias
+conflitantes.
+
+(V) Desenvolvimento em paralelo, isto é, a possibilidade de desenvolver ao mesmo tempo diversas
+classes de um sistema, é uma das vantagens de ocultamento de informação.
+RESPOSTA: Verdadeiro. O ocultamento de informação permite que módulos sejam desenvolvidos de
+forma independente e simultânea, pois cada módulo expõe apenas sua interface.
+
+(F) Getters e setters são essenciais para implementação de classes com ocultamento de informação.
+RESPOSTA: Falso. Getters e setters podem violar o encapsulamento ao expor o estado interno.
+O ocultamento de informação não exige nem depende deles.
+
+(F) Todo acoplamento estrutural é também um acoplamento evolutivo.
+RESPOSTA: Falso. Módulos podem estar estruturalmente acoplados (compartilhar tipos ou interfaces)
+sem que suas histórias de mudança se correlacionem, ou seja, sem acoplamento evolutivo.
+
+(F) O Princípio de Substituição de Liskov aplica-se somente a linguagens com herança.
+RESPOSTA: Falso. O LSP se aplica a qualquer forma de polimorfismo, incluindo interfaces e tipos
+abstratos, não se restringindo à herança clássica.
+
+(F) De acordo com o Princípio Aberto/Fechado, uma classe deve ser aberta para modificações,
+mas fechada para extensões.
+RESPOSTA: Falso. É o contrário: aberta para extensões, fechada para modificações. Deve-se poder
+adicionar comportamento sem alterar o código já existente.
+
+(V) 'Não fale com estranhos' é uma frase que resume o Princípio de Demeter.
+RESPOSTA: Verdadeiro. O Princípio de Demeter prega que um objeto deve interagir apenas com seus
+"amigos diretos", evitando encadeamentos longos de chamadas com objetos desconhecidos.
+
+----------------------------------------------------------------
+QUESTÃO 2 - A seguinte figura (xkcd 2347) ilustra os problemas derivados de qual propriedade
+de projeto? (figura: toda a infraestrutura digital moderna apoiada sobre um único projeto
+mantido por uma pessoa aleatória em Nebraska desde 2003)
+
+RESPOSTA: A figura ilustra os problemas derivados do alto ACOPLAMENTO. Inúmeros sistemas
+dependem fortemente de um único componente obscuro. Qualquer falha, abandono ou
+vulnerabilidade nesse componente se propaga para todos os dependentes, tornando o sistema
+como um todo frágil e difícil de manter.
+
+----------------------------------------------------------------
+QUESTÃO 3 - Considere duas figuras representando o uso de uma classe Botão para controlar
+uma Lâmpada:
+- Figura da esquerda: Botão se comunica diretamente com a classe Lâmpada.
+- Figura da direita: existe uma interface intermediária ButtonServer que a classe Lâmpada
+  implementa.
+
+(a) Qual princípio do SOLID é violado na figura da esquerda e respeitado na figura da direita?
+
+RESPOSTA: O princípio violado na esquerda e respeitado na direita é o Princípio da Inversão
+de Dependência (DIP - Dependency Inversion Principle). Na figura da esquerda, Button (módulo
+de alto nível) depende diretamente de Lamp (módulo de baixo nível). Na figura da direita,
+ambos dependem da abstração ButtonServer — módulos de alto nível não dependem de módulos
+de baixo nível; ambos dependem de abstrações.
+
+(b) Qual a principal vantagem da solução com a interface (figura da direita)? Em que situações
+essa abordagem deve ser utilizada?
+
+RESPOSTA: A principal vantagem é o desacoplamento: Button pode ser reutilizado com qualquer
+classe que implemente ButtonServer (ventilador, motor, sirene) sem nenhuma alteração em seu
+código. Essa abordagem deve ser utilizada quando:
+- O módulo de alto nível precisa ser reutilizável com diferentes implementações concretas.
+- Se deseja estender o comportamento sem modificar código existente (respeitando o OCP).
+- Há necessidade de substituir implementações facilmente, inclusive em testes.
+
+----------------------------------------------------------------
+QUESTÃO 4 - Sejam dois módulos: Módulo A e Módulo B. Qual dos dois apresenta o melhor
+design? Justifique.
+
+Módulo A: interface com 50 LOC  / implementação com 950 LOC
+Módulo B: interface com 500 LOC / implementação com 500 LOC
+
+RESPOSTA: O Módulo A apresenta o melhor design.
+
+Segundo o conceito de "Deep Modules" de John Ousterhout (A Philosophy of Software Design),
+um bom módulo tem uma interface pequena e simples que esconde uma implementação complexa,
+maximizando o ocultamento de informação e minimizando a carga cognitiva imposta ao usuário.
+
+O Módulo A possui interface enxuta (50 LOC) ocultando grande complexidade (950 LOC),
+oferecendo muito valor com pouca exposição. Já o Módulo B é um "módulo raso" (shallow
+module): sua interface é tão grande quanto sua implementação, indicando pouca abstração e
+pouco ocultamento — o usuário precisa compreender quase tanto quanto o implementador.
+
+----------------------------------------------------------------
+QUESTÃO 5 - Processo para obter um certificado de curso de extensão:
+
+1. Enviou mensagem para o coordenador do curso.
+2. Ele pediu que enviasse mensagem para a secretaria do DCC.
+3. A secretaria do DCC orientou que falasse com o CENEX.
+4. O CENEX orientou que enviasse mensagem para a PROEX.
+5. A PROEX enviou o certificado em PDF.
+
+(a) Qual princípio de projeto de software está sendo violado nesse exemplo?
+
+RESPOSTA: O princípio violado é o Princípio de Demeter (Lei de Demeter). O aluno percorre uma
+longa cadeia de intermediários para obter o certificado, interagindo com "estranhos" — entidades
+que não são seu contato direto — em vez de um único ponto de contato responsável.
+
+(b) Além de ser necessário enviar diversas mensagens, qual outro problema pode ser identificado
+nesse processo?
+
+RESPOSTA: O outro problema é o alto acoplamento do processo à estrutura organizacional interna.
+O aluno precisa conhecer e depender de toda a cadeia burocrática (coordenador → DCC → CENEX →
+PROEX). Qualquer mudança nessa estrutura (ex.: extinção do CENEX) quebra o processo para quem
+o segue. O conhecimento de como navegar essa cadeia fica exposto ao usuário, violando também
+o princípio de ocultamento de informação.
